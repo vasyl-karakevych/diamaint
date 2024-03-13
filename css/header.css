@@ -1,8 +1,33 @@
+:root {
+  --font-family: "Montserrat", sans-serif;
+  --second-family: "Playfair Display", sans-serif;
+  --third-family: "Work Sans", sans-serif;
+  --font3: "Circe", sans-serif;
+}
+
 [class*=__container] {
   max-width: 1400px;
   margin: 0px auto;
 }
 
 header {
-  max-height: 100px;
+  min-height: 100px;
+  background-color: #edecf6;
+  position: relative;
+}
+header .header__container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+header .header__container .icon, header .header__container .main-menu, header .header__container ul, header .header__container li, header .header__container .contacts {
+  display: inline-block;
+}
+header .header__container li {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 158%;
+  color: #515076;
+  margin: 15px;
 }/*# sourceMappingURL=header.css.map */
