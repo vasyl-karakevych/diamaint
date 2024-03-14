@@ -1,5 +1,4 @@
 $color-violet-light: #6E6D87;
-// $color-violet-medium: #515076;
 $color-violet-dark: #515076;
 
 :root {
@@ -11,22 +10,33 @@ $color-violet-dark: #515076;
 
 
 body {
+	margin: 0px auto;
 }
 [class*="__container"]{
 	max-width: 1400px;
-	margin: 0px auto;
+	// margin: 0px auto;
 }
 
 header {
 	min-height: 100px;
 	background-color: #edecf6; 
 	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+
 		.header__container{
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);
-				.icon, .main-menu, ul, li, .contacts  {
+				.icon, .main-menu, ul, li, .contacts {
 					display: inline-block;
+				}
+				nav {
+					// position: relative;
+				}
+				ul {
+
 				}
 				li {
 					font-family: var(--font-family);
@@ -35,7 +45,19 @@ header {
 					line-height: 158%;
 					color: $color-violet-dark;
 					margin: 15px;
-				}
+					border-radius: 3px;
+					height: 70px;
+					text-align: center;
+					padding-top: 10%;
 
+						a{						
+							text-decoration: none;
+							color: inherit;
+						}
+
+				}
+				li:hover {
+					background: rgba(81, 80, 118, 0.1);
+				}
 		}
 }
