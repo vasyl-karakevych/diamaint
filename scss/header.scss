@@ -21,6 +21,7 @@ header {
 	min-height: 100px;
 	background-color: #edecf6; 
 	position: relative;
+	// margin: 0px auto;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -32,11 +33,14 @@ header {
 				.icon, .main-menu, ul, li, .contacts {
 					display: inline-block;
 				}
+				.main-menu {
+					margin: 10px 0px;
+				}
 				nav {
 					// position: relative;
 				}
 				ul {
-
+					display: table-raw;
 				}
 				li {
 					font-family: var(--font-family);
@@ -44,12 +48,14 @@ header {
 					font-size: 1rem;
 					line-height: 158%;
 					color: $color-violet-dark;
-					margin: 15px;
 					border-radius: 3px;
 					height: 70px;
 					text-align: center;
-					padding-top: 10%;
-
+					width: 100px;
+					cursor: pointer;
+					display: table-cell; 
+					vertical-align: middle;
+					padding: 5px;
 						a{						
 							text-decoration: none;
 							color: inherit;
