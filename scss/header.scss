@@ -1,6 +1,9 @@
 $color-violet-light: #6E6D87;
 $color-violet-dark: #515076;
 
+$font-family: "Work Sans", sans-serif;
+
+
 :root {
 	--font-family: "Montserrat", sans-serif;
 	--second-family: "Playfair Display", sans-serif;
@@ -13,7 +16,7 @@ body {
 	margin: 0px auto;
 }
 [class*="__container"]{
-	max-width: 1400px;
+		max-width: 1400px;
 	// margin: 0px auto;
 }
 
@@ -27,43 +30,63 @@ header {
 	justify-content: center;
 
 		.header__container{
-			position: absolute;
-			top: 50%;
-			transform: translateY(-50%);
-				.icon, .main-menu, ul, li, .contacts {
-					display: inline-block;
-				}
-				.main-menu {
-					margin: 10px 0px;
-				}
-				nav {
-					// position: relative;
-				}
-				ul {
-					display: table-raw;
-				}
-				li {
-					font-family: var(--font-family);
-					font-weight: 500;
-					font-size: 1rem;
-					line-height: 158%;
-					color: $color-violet-dark;
-					border-radius: 3px;
-					height: 70px;
-					text-align: center;
-					width: 100px;
-					cursor: pointer;
-					display: table-cell; 
-					vertical-align: middle;
-					padding: 5px;
-						a{						
-							text-decoration: none;
-							color: inherit;
-						}
+			// position: relative;
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
 
+				// .header-icon, .main-menu, ul, li, .contacts {
+				// 	display: inline-block;
+				// }
+
+				nav {
+					margin: 10px 0px;
+						.header-icon {
+							width: 67px;
+							height: 67px;
+							border: 1px solid $color-violet-light;
+							border-radius: 100%; 
+							margin: 0px 50px 5px 0px; 
+							background: url('../img/D.png') center no-repeat; 
+						}
+						ul {
+							display: table-raw;
+							li {
+								font-family: $font-family;//var(--font-family);
+								letter-spacing: 0.1rem;
+								font-weight: 500;
+								font-size: 1rem;
+								line-height: 158%;
+								color: $color-violet-dark;
+								border-radius: 3px;
+								height: 70px;
+								text-align: center;
+								width: 120px;
+								cursor: pointer;
+								display: table-cell; 
+								vertical-align: middle;
+								padding: 5px;
+								opacity: 0.5;
+									a{						
+										text-decoration: none;
+										color: inherit;
+									}
+			
+							}
+						}
+					
 				}
+				
+				 
 				li:hover {
 					background: rgba(81, 80, 118, 0.1);
+					opacity: 1;
 				}
+				.contacts {
+			
+					right: 0px;
+					height: 70px;
+					
+
 		}
 }
