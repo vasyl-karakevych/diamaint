@@ -1,0 +1,10 @@
+.p-diamaint {
+  font-family: Playfair Display;
+  font-size: 14.375rem;
+
+  font-weight: 400;
+  line-height: 13.28rem;
+  text-align: left;
+  color: var(--color-ping-dark);
+  margin: 80px 0px 30px 0px;
+}
