@@ -9,13 +9,14 @@ body {
   margin: 0px auto;
 }
 
-[class*=__container] {
+[class*="__container"] {
   max-width: 1400px;
   margin: 0px auto;
+  padding: 0 10px;
 }
 
 header {
-  background-color: #EDECF6;
+  background-color: #edecf6;
 }
 header .header__container {
   display: flex;
@@ -28,6 +29,7 @@ header .header__container nav.main-menu {
   display: flex;
   justify-content: start;
   align-items: center;
+  margin-right: 10px;
 }
 header .header__container nav.main-menu .header-icon {
   width: 67px;
@@ -38,7 +40,7 @@ header .header__container nav.main-menu .header-icon {
   background-repeat: no-repeat;
   border-radius: 100%;
   border-radius: 100%;
-  border: 1px solid #6E6D87;
+  border: 1px solid #6e6d87;
   padding-left: 5px;
   margin-right: 60px;
 }
@@ -54,15 +56,19 @@ header .header__container nav.main-menu ul li {
   justify-content: center;
   align-items: center;
   padding: 0 10px;
-  width: 100px;
+  max-width: 100px;
   cursor: pointer;
+  width: 100px;
+  /*  */
 }
 header .header__container nav.main-menu ul li a {
   font-family: "Playfair Display", sans-serif;
-  color: #6E6D87;
+  color: #6e6d87;
   font-weight: 500;
   font-size: 16px;
   line-height: 158%;
+  text-align: center;
+  text-decoration: none:
 }
 header .header__container nav.main-menu ul li:hover {
   color: #5a597d;
@@ -70,4 +76,65 @@ header .header__container nav.main-menu ul li:hover {
 }
 header .header__container .contacts {
   display: flex;
-}/*# sourceMappingURL=header.css.map */
+}
+
+.contact-socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.basket {
+  width: 66px;
+  height: 60px;
+  background-color: white;
+  border-radius: 100%;
+  background-image: url("../img/basket.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  margin-right: 50px;
+}
+.basket:hover {
+  cursor: pointer;
+}
+.basket::before {
+  content: attr(data-count);
+  position: absolute;
+  top: 1px;
+  right: -5px;
+  width: 21px;
+  height: 21px;
+  border-radius: 100%;
+  background: #757aa5;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Montserrat;
+  font-weight: 600;
+  line-height: 17.07px;
+  text-align: left;
+}
+.contact-socials {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3px 0;
+}
+.contact-socials a {
+  color: #515076;
+  font-family: "Playfair Display", sans-serif;
+}
+
+@media (max-width: 980px){
+	header .header__container nav.main-menu ul li {
+		max-width: 50px;
+		gap: 0px;
+	}
+}
+@media (max-width: 740px){
+	header .header__container nav.main-menu ul {
+		display: none; //
+	}
+}
+
