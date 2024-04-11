@@ -77,7 +77,6 @@ header .header__container nav.main-menu ul li:hover {
 header .header__container .contacts {
   display: flex;
 }
-
 .contact-socials {
   display: flex;
   flex-direction: row;
